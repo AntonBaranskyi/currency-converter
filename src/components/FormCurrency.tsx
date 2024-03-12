@@ -12,22 +12,22 @@ import { MainContext } from '../context/MainContext';
 import { MODE } from '../types/modeEnum';
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
-  width: 48, // Змінено ширину на 48px
-  height: 28, // Змінено висоту на 28px
+  width: 48,
+  height: 28,
   padding: 0,
   display: 'flex',
   '&:active': {
     '& .MuiSwitch-thumb': {
-      width: 20, // Збільшено ширину пальця перемикача
+      width: 20,
     },
     '& .MuiSwitch-switchBase.Mui-checked': {
-      transform: 'translateX(16px)', // Збільшено відстань переміщення для включеного перемикача
+      transform: 'translateX(16px)',
     },
   },
   '& .MuiSwitch-switchBase': {
     padding: 2,
     '&.Mui-checked': {
-      transform: 'translateX(20px)', // Збільшено відстань переміщення для включеного перемикача
+      transform: 'translateX(20px)',
       color: '#fff',
       '& + .MuiSwitch-track': {
         opacity: 1,
@@ -37,15 +37,15 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
   },
   '& .MuiSwitch-thumb': {
     boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-    width: 24, // Збільшено ширину пальця перемикача
-    height: 24, // Збільшено висоту пальця перемикача
-    borderRadius: 12, // Змінено радіус кутів пальця перемикача
+    width: 24,
+    height: 24,
+    borderRadius: 12,
     transition: theme.transitions.create(['width'], {
       duration: 200,
     }),
   },
   '& .MuiSwitch-track': {
-    borderRadius: 14, // Збільшено радіус кутів треку перемикача
+    borderRadius: 14,
     opacity: 1,
     backgroundColor:
       theme.palette.mode === 'dark'

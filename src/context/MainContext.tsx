@@ -45,7 +45,6 @@ export const MainProvider: React.FC<Props> = ({ children }) => {
       const data = JSON.parse(message.data);
 
       if (data.b && data.b.length > 0 && data.a && data.a.length > 0) {
-        // Отримуємо ціну купівлі (перший елемент у списку bids)
         setBidPrice(data.b[0][0]);
         setAskPrice(data.a[0][0]);
       }
