@@ -4,7 +4,7 @@
 - React
 - TypeScript
 - WebSockets
-- React Cintext
+- React Context
 - Binance API
 
 --- [Demo](https://main--cheerful-starburst-a77f5e.netlify.app/)
