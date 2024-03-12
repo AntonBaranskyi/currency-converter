@@ -66,13 +66,15 @@ export const MainProvider: React.FC<Props> = ({ children }) => {
   };
 
   const convertUserPrice = (value: string) => {
-    if (currentMode === MODE.BUY) {
-      setUsdt(+value * +bidPrice);
+    let price = 0;
+    
+    if (currentMode === MODE.BUY && bidPrice !== '') {
+      price = +value * +bidPrice;
+    } else if (askPrice !== '') {
+      price = +value * +askPrice;
     }
-
-    setUsdt(+value * +askPrice);
+    setUsdt(price);
   };
-
   const isLoading = useMemo(() => !bidPrice || !askPrice, [bidPrice, askPrice]);
 
   const value = {

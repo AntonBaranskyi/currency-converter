@@ -7,7 +7,7 @@ import {
   Typography,
   styled,
 } from '@mui/material';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MainContext } from '../context/MainContext';
 import { MODE } from '../types/modeEnum';
 
@@ -70,6 +70,10 @@ export const FormCurrency = () => {
     onChangeCurrentMode();
     convertUserPrice(userCurrency);
   };
+
+  useEffect(() => {
+    convertUserPrice(userCurrency);
+  }, [currentMode, convertUserPrice, userCurrency]);
 
   return (
     <FormGroup
